@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Practical Application Activity</title>
+</head>
+
+<body>
+
+    <!-- Main heading of the webpage -->
+    <h1 id="main-heading">HTML Practical Application Activity</h1>
+
+    <p>
+        This webpage demonstrates Images, Hyperlinks, Multimedia,
+        Useful HTML Tags, and the HTML DOM.
+    </p>
+
+
+    <!-- ===================================================== -->
+    <!-- 1. IMAGES -->
+    <!-- ===================================================== -->
+
+    <h2 id="images-section">1. Images</h2>
+
+    <p>
+        The following images demonstrate how images can be added
+        to an HTML webpage using the &lt;img&gt; tag.
+    </p>
+
+     <h1> A beautiful nature landscape </h1>
+    <img 
+        src="A beautiful nature landscape.jpg" 
+        alt="A beautiful nature landscape"
+        width="400"
+    >
+
+    <br><br>
+
+    <!-- Image 2 inside a figure -->
+    <figure>
+        <img 
+            src="mountain.jpg" 
+            alt="A scenic view of mountains"
+            width="400"
+        >
+
+        <figcaption>
+            Figure 1: A scenic mountain landscape.
+        </figcaption>
+    </figure>
+
+    <h1> A scenic mountain landscape. </h1>
+    <img 
+        src="peaceful.webp"     
+        alt="A peaceful outdoor environment"
+        width="400"
+    >
+        
+             
+        
+
+    <!-- ===================================================== -->
+    <!-- 2. HYPERLINKS -->
+    <!-- ===================================================== -->
+
+    <h2 id="links-section">2. Hyperlinks</h2>
+
+    <p>
+        HTML hyperlinks allow users to navigate to different
+        pages, websites, email addresses, or sections of a page.
+    </p>
+
+    <!-- Internal link -->
+    <p>
+        <strong>Internal Link:</strong>
+        <a href="activity.html#useful-tags-section">Go to Useful Tags Section</a>
+    </p>
+
+    <!-- External link -->
+    <p>
+        <strong>External Link:</strong>
+        <a href="https://www.google.com" target="_blank">
+            Visit Google
+        </a>
+    </p>
+
+    <!-- Email link -->
+    <p>
+        <strong>Email Link:</strong>
+        <a href="mailto:example@gmail.com">
+            Send me an Email
+        </a>
+    </p>
+
+    <!-- Same-page anchor link -->
+    <p>
+        <strong>Same-Page Anchor Link:</strong>
+        <a href="#multimedia-section">
+            Go to Multimedia Section
+        </a>
+    </p>
+
+
+    <!-- ===================================================== -->
+    <!-- 3. MULTIMEDIA -->
+    <!-- ===================================================== -->
+
+    <h2 id="multimedia-section">3. Multimedia</h2>
+
+    <p>
+        HTML5 provides audio and video elements that allow
+        multimedia content to be displayed directly on a webpage.
+    </p>
+
+    <h3>Audio</h3>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video</h3>
+
+    <video controls width="500">
+        <source src="Video1.mp4" type="video/mp4">
+
+        Your browser does not support the video element.
+    </video>
+
+
+    <!-- ===================================================== -->
+    <!-- 4. USEFUL TAGS -->
+    <!-- ===================================================== -->
+
+    <h2 id="useful-tags-section">4. Useful Tags</h2>
+
+    <p>
+        HTML has many useful tags that can make a webpage
+        more informative and organized.
+    </p>
+
+
+    <!-- The <mark> tag is used to highlight important text. -->
+    <p>
+        The <mark>HTML DOM</mark> represents a webpage as a tree
+        of elements.
+    </p>
+
+
+    <!-- The <abbr> tag is used to show the meaning of an abbreviation. -->
+    <p>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+        is used to create the structure of webpages.
+    </p>
+
+
+    <!-- The <blockquote> tag is used to display a longer quotation. -->
+    <blockquote>
+        "The web is for everyone."
+    </blockquote>
+
+
+    <!-- The <code> tag is used to display computer code. -->
+    <p>
+        An example of an HTML heading is
+        <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>.
+    </p>
+
+
+    <p>
+        &copy; 2026 HTML Practical Application Activity
+    </p>
+
+
+
+    <h2 id="dom-section">5. HTML DOM</h2>
+
+    <p id="dom-description">
+        The HTML DOM represents the webpage as a tree of elements.
+        Each element can have a parent, children, and other related elements.
+    </p>
+
+    <div id="dom-container">
+
+        <section id="dom-content">
+
+            <h3 id="dom-heading">DOM Tree Example</h3>
+
+            <ul id="dom-list">
+
+                <li>HTML is the root element.</li>
+
+                <li>
+                    Body is a child of HTML.
+
+                    <ul>
+                        <li>Headings are children of Body.</li>
+                        <li>Paragraphs are children of Body.</li>
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
+    <h3>
+        DOM tree Screenshot.
+    </h3>
+
+    <img
+    src="dom-tree.png"
+    alt="Screenshot of the HTML DOM tree in browser Developer Tools"
+    width="700"
+    >
+
+
+</body>
+
+</html>
