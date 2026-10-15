@@ -1,0 +1,228 @@
+
+/* =====================================
+   1. RESET AND CSS FUNDAMENTALS
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* First rule for the body */
+body {
+    color: gray;
+}
+
+/* Second rule wins because it has the same specificity
+   but appears later in the stylesheet. */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: rgb(240, 244, 248);
+    line-height: 1.6;
+}
+
+/* =====================================
+   2. HEADER AND NAVIGATION
+   ===================================== */
+
+header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 24px;
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 12px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    background-color: #2878B5;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 4px;
+    border-radius: 6px;
+}
+
+/* Pseudo-class: changes link appearance on hover */
+nav a:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* =====================================
+   3. CARDS AND BOX MODEL
+   ===================================== */
+
+main {
+    padding: 24px 0;
+}
+
+.card {
+    width: 500px;
+    max-width: 95%;
+    padding: 20px;
+    border: 2px solid #8899bb;
+    border-radius: 12px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Total rendered width with border-box:
+   The card's total width is 500px, including 40px of horizontal
+   padding (20px on each side) and 4px of borders (2px on each side).
+   The content area is 456px wide (500px - 40px - 4px). */
+
+#about {
+    position: relative;
+    border-color: #2878B5;
+    background-color: #eaf4ff;
+}
+
+/* Badge positioned in the top-right corner */
+#about::after {
+    content: "PROFILE";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: navy;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 10px;
+}
+
+/* Descendant selector */
+.card p {
+    margin-bottom: 12px;
+}
+
+/* Type selector: lower specificity */
+p {
+    color: crimson;
+}
+
+/* Class selector: higher specificity, so this color wins */
+.intro {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: darkslateblue;
+}
+
+/* Pseudo-element */
+.intro::first-letter {
+    font-size: 1.5rem;
+    color: orange;
+}
+
+/* =====================================
+   4. SKILLS AND DISPLAY
+   ===================================== */
+
+.skills-list {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+/* Child selector */
+.skills-list > li {
+    background-color: #2878B5;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* =====================================
+   5. VISIBILITY AND OVERFLOW
+   ===================================== */
+
+/* Removes the paragraph and its space */
+.hide-none {
+    display: none;
+}
+
+/* Hides the paragraph but keeps its space */
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* Fixed-height box with a scrollbar when needed */
+.scroll-box {
+    height: 180px;
+    overflow: auto;
+}
+
+/* display: none removes the element from the layout.
+   visibility: hidden hides it but reserves its space. */
+
+/* =====================================
+   6. FOOTER AND RESPONSIVE LAYOUT
+   ===================================== */
+
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Allow the cards to fit smaller screens */
+@media (max-width: 540px) {
+    .card {
+        width: 92%;
+    }
+}
+
+/* =====================================
+   7. REFLECTION QUESTIONS AND ANSWERS
+   ===================================== */
+
+/*
+1. Why did one of the two conflicting rules win in Part A?
+
+The .intro rule won because a class selector is more specific
+than a paragraph (p) type selector. Both rules target the same
+paragraph, but the class selector has higher specificity,
+so its color is used.
+
+2. What is the rendered width of one .card with content-box?
+
+With content-box, the width only covers the content, so the
+padding and border are added to it.
+
+Total width = 500px + 20px + 20px + 2px + 2px = 544px.
+
+With border-box, the padding and border are included in the
+500px total width. The content area is 456px wide.
+
+3. When would you use visibility: hidden instead of display: none?
+
+I would use visibility: hidden when I want to hide an element
+but keep its space on the page. I would use display: none
+when I want to hide an element and remove its space from
+the layout.
+*/
